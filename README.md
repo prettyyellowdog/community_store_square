@@ -1,4 +1,5 @@
-# community_store_square
+## Project
+community_store_square
 Square credit card payment add-on for Community Store for concrete5
 
 https://squareup.com
@@ -10,5 +11,5 @@ Install this package
 
 ## Contributors
 Thanks both Mirko (bulli1979) and Christian (guedeWebGate) for their help in developing this add-on.
-Also I would like to thank Ryan (Mesuva) for the input and review.
-Thanks guys your input got me into the right direction.
+Also, I would like to thank Ryan (Mesuva) for the review.
+Thanks guys for your input and guidance!
