@@ -137,9 +137,11 @@ class CommunityStoreSquarePaymentMethod extends StorePaymentMethod
 
         // Alert for debugging purposes only
         Log::addEntry('Square info.'."\n".'Result is:' . $result . "\n", t('Community Store Square'));
+	
+	$result = json_decode($result);
 
         // credit card payment was successful - updating database - order record
-        return array('error'=>0, 'transactionReference'=>$result);
+        return array('error'=>0, 'transactionReference'=>$result->transaction->id);
   		} catch (\SquareConnect\ApiException $e) {
         $respBody = $e->getResponseBody();
         if (is_object($respBody)) {
