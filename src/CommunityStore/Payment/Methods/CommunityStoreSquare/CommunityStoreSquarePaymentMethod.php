@@ -36,8 +36,9 @@ class CommunityStoreSquarePaymentMethod extends StorePaymentMethod
         $this->set('squareGateways',$gateways);
 
         $currencies = array(
-        	'USD'=>t('US Dollars'),
-        	'CAD'=>t('Canadian Dollar')
+        	'AUD'=>t('Australian Dollar'),
+		'CAD'=>t('Canadian Dollar'),
+		'USD'=>t('US Dollar')
         );
 
         $this->set('squareCurrencies',$currencies);
