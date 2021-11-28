@@ -1,15 +1,13 @@
 ## Project
 community_store_square
-Square credit card payment add-on for Community Store for concrete5
+Square credit card payment add-on for Community Store for ConcreteCMS
 
 https://squareup.com
 
 ## Installation
-Install Community Store first
-Register your application with square to generate Application ID / Token / Location (https://docs.connect.squareup.com/)
-Install this package
+1. Install Community Store (https://concrete5-community-store.github.io/community_store/)
+2. Register with Square to generate Application ID / Token / Location (https://developer.squareup.com)
+3. Install this package
 
 ## Contributors
-Thanks both Mirko (bulli1979) and Christian (guedeWebGate) for their help in developing this add-on.
-Also, I would like to thank Ryan (Mesuva) for the review.
-Thanks guys for your input and guidance!
+Thank you to Babinsky (https://github.com/Babinsky) for starting this project.
