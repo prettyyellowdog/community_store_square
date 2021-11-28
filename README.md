@@ -1,5 +1,4 @@
 ## Project
-community_store_square
 Square credit card payment add-on for Community Store for ConcreteCMS
 
 https://squareup.com
