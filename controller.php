@@ -11,12 +11,12 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 class Controller extends Package
 {
     protected $pkgHandle = 'community_store_square';
-    protected $appVersionRequired = '5.7.2';
-    protected $pkgVersion = '0.9.1';
+    protected $appVersionRequired = '8.4.0';
+    protected $pkgVersion = '0.9.5';
 
     public function on_start()
     {
-      require 'vendor/autoload.php';
+        $this->setupAutoloader();
     }
 
     public function getPackageDescription()
@@ -32,17 +32,18 @@ class Controller extends Package
     public function install()
     {
         $installed = Package::getInstalledHandles();
-        if(!(is_array($installed) && in_array('community_store',$installed)) ) {
+        if (!(is_array($installed) && in_array('community_store', $installed))) {
             throw new ErrorException(t('This package requires that Community Store be installed'));
         } else {
+            $this->setupAutoloader();
             $pkg = parent::install();
             $pm = new PaymentMethod();
-            $pm->add('community_store_square','Square',$pkg);
+            $pm->add('community_store_square', 'Square', $pkg);
         }
-
     }
     public function uninstall()
     {
+        $this->setupAutoLoader();
         $pm = PaymentMethod::getByHandle('community_store_square');
         if ($pm) {
             $pm->delete();
@@ -50,5 +51,10 @@ class Controller extends Package
         $pkg = parent::uninstall();
     }
 
+    private function setupAutoloader()
+    {
+        if (file_exists($this->getPackagePath() . '/vendor')) {
+            require_once $this->getPackagePath() . '/vendor/autoload.php';
+        }
+    }
 }
-?>

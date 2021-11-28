@@ -1,5 +1,33 @@
 {
-  "require": {
-    "square/connect": "*"
-  }
+    "name" : "prettyyellowdog/community_store_square",
+    "description": "Square Web Payment integration for Community Store",
+    "type" : "concrete5-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bill Jones",
+            "homepage": "https://github.com/prettyyellowdog",
+            "role": "Developer"
+        },
+        {
+            "name": "Babinsky",
+            "homepage": "https://github.com/Babinsky",
+            "role": "Contributor"
+        }
+    ],
+    "prefer-stable": true,
+    "require": {
+        "square/square": "^16.0.0.20211117",
+        "sudiptpa/guid": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Concrete\\Package\\CommunityStoreSquare\\Src\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "5.5.9"
+        }
+    }
 }
