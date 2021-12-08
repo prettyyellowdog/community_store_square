@@ -78,7 +78,7 @@ class CommunityStoreSquarePaymentMethod extends StorePaymentMethod
         $pkgPath = Package::getByHandle('community_store_square')->getRelativePath();
 
         $this->set('jsPath', $pkgPath . '/elements/community_store_square/js/checkout_form.js');
-        $this->set('squareJsUrl', 'https:' . ($mode == 'live' ? '' : 'sandbox.') . 'web.squarecdn.com/v1/square.js');
+        $this->set('squareJsUrl', 'https://' . ($mode == 'live' ? '' : 'sandbox.') . 'web.squarecdn.com/v1/square.js');
 
         $customer = new StoreCustomer();
 
